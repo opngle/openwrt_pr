@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Checkout source
-      uses: actions/checkout@v3
+      uses: actions/checkout
       with:
         ref: z81013axde
 
