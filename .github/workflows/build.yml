@@ -1,4 +1,4 @@
-name: Build OpenWrt Z8103AX-D
+name: Build OpenWrt Z8103AX-DE128M
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
 
     - name: Load .config
       run: |
-        cp .github/z8103axd.config .config
+        cp .github/z8103axde.config .config
         make defconfig
 
     - name: Update and install feeds
@@ -38,5 +38,5 @@ jobs:
     - name: Upload firmware
       uses: actions/upload-artifact@v4
       with:
-        name: Z8103AXD-Firmware
+        name: Z8103AXDE128M-Firmware
         path: bin/targets/
